@@ -21,4 +21,5 @@ from djangoapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('json/', views.json_view, name='json'),
 ]
