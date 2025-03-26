@@ -3,6 +3,6 @@ class LoggingMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        print('LoggingMiddleware executed')
+        print(f'LoggingMiddleware executed, IP: {request.META['REMOTE_ADDR']}')
         response = self.get_response(request)
         return response
