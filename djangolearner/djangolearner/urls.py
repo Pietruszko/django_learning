@@ -18,10 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from djangoapp import views
 
+handler404 = 'djangoapp.views.custom_404'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('json/', views.json_view, name='json'),
     path('user/<str:name>/', views.http_view, name='http'),
     path('search/', views.query_view, name='search'),
+    path('add-and-get/', views.add_and_get_items),
 ]
