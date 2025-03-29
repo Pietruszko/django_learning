@@ -27,4 +27,6 @@ urlpatterns = [
     path('user/<str:name>/', views.http_view, name='http'),
     path('search/', views.query_view, name='search'),
     path('add-and-get/', views.add_and_get_items),
+    path('add-todo/', views.add_todo, name='add-todo'),
+    path('get/', views.check_todo, name='get-todo'),
 ]
