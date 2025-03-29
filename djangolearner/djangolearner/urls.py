@@ -29,4 +29,6 @@ urlpatterns = [
     path('add-and-get/', views.add_and_get_items),
     path('add-todo/', views.add_todo, name='add-todo'),
     path('get/', views.check_todo, name='get-todo'),
+    path('add-category/', views.add_category, name='add-category'),
+    path('add-todo-with-category/', views.add_todo_with_category, name='add-todo-with-category'),
 ]
